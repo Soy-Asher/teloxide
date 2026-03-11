@@ -15,7 +15,7 @@
 // ```
 use teloxide::{dispatching::dialogue::InMemStorage, prelude::*};
 
-type MyDialogue = Dialogue<State, InMemStorage<State>>;
+type MyDialogue<State> = Dialogue<State, InMemStorage<State>>;
 type HandlerResult = Result<(), Box<dyn std::error::Error + Send + Sync>>;
 
 #[derive(Clone, Default)]
